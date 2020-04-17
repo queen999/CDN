@@ -8,8 +8,10 @@ subtitle: '元小元科技'
 description: ''
 keywords:
 author: 覃浩
-language: zh-cn
+language: zh-CN
 timezone: ''
+favicon: https://img.icons8.com/nolan/96/orca.png
+use_cdn: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -30,6 +32,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "2019-nCoV/*"
+  - "VPN/*"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -93,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Sakura
+theme: Volantis2.6
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -106,7 +110,16 @@ deploy:
   - type: baidu_url_submitter
 
 baidu_url_submit:
-  count: 1               # 提交最新的多少个链接
+  count: 100               # 提交最新的多少个链接
   host: www.zhengyuanyuan520.com    # 在百度站长平台中添加的域名
   token: 5DI6HZ8chaGSyySQ      # 秘钥
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
+
+
+
+gitalk:
+  clientID: 6d7c1b49feaa6503bb32
+  clientSecret: fe1f563ec1941791081a2ffee7837ecb5054660b
+  repo: blogcomments
+  owner: queen999
+  admin: [queen999]
