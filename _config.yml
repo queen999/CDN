@@ -1,21 +1,21 @@
-  # Hexo Configuration
+## Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
 title: 覃浩的博客
-subtitle: '元小元科技'
+subtitle: '覃浩的博客'
 description: ''
 keywords:
 author: 覃浩
 language: zh-CN
 timezone: ''
 favicon: https://img.icons8.com/nolan/96/orca.png
-use_cdn: true
+baidu_push: true 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.zhengyuanyuan520.com
+url: https://www.imqinhao.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Volantis2.6
+theme: volantis3
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -111,15 +111,26 @@ deploy:
 
 baidu_url_submit:
   count: 100               # 提交最新的多少个链接
-  host: www.zhengyuanyuan520.com    # 在百度站长平台中添加的域名
+  host: www.imqinhao.cn    # 在百度站长平台中添加的域名
   token: 5DI6HZ8chaGSyySQ      # 秘钥
   path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
 
 
 
-gitalk:
-  clientID: 6d7c1b49feaa6503bb32
-  clientSecret: fe1f563ec1941791081a2ffee7837ecb5054660b
-  repo: blogcomments
-  owner: queen999
-  admin: [queen999]
+# gitalk:
+#   clientID: 6d7c1b49feaa6503bb32
+#   clientSecret: fe1f563ec1941791081a2ffee7837ecb5054660b
+#   repo: blogcomments
+#   owner: queen999
+#   admin: [queen999]
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+  - hexo-generator-feed
+  #Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
